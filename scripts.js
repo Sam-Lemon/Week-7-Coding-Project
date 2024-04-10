@@ -9,24 +9,45 @@
     c. Use a loop to iterate through the array and calculate the average age.
 */
 
-
+// Step 1
+console.log("Step 1");
 let ages = [3, 9, 23, 64, 2, 8, 28, 93];
-
-//Step A:
-/*.shift pulls the first element from the array, and .pop pulls the last element.*/
-
-
 console.log(ages);
-let x = ages.shift();
-let y = ages.pop();
+
+//Part A:
+let x = ages.slice(0, 1); //stores the first element of an array. index 0, only taking 1 element
+console.log("x = " + x);
+let y = ages[ages.length - 1]; //stores the last element of an array
+console.log("y = " + y);
+//these two methods (idk if that's the right word) store the values, not return them.
+//this makes sure that they stay in the array and are not pulled out.
+
+function subElements(x, y) {
+    return y - x; //stores the value remaining 
+} //create function to do the subtraction. parameters x and y, return to give a value
+console.log("Part A: " + subElements(x, y)); // console logged the function
+
+ages.push(45); //adds the new element to the end of the array
+console.log(ages);
+
+console.log(subElements(x, y));
+
+
+
+/*
+let x = ages.shift(); //pulls the first element of the array
+let y = ages.pop(); //pulls the last element of the array
 function subElements(x, y) {
     return y - x;
-}
-console.log("Step a: " + subElements(x, y));
+} //create function to do the subtraction. parameters x and y, return to give a value
+console.log("Step a: " + subElements(x, y)); // console logged the function
+*/
 
+//Part B: 
 
-//Step B: 
+//ages.push(45); //pushes a new element into the last position of the array
 
+/*
 ages.push(45);
 console.log(ages);
 let x = ages.shift();
@@ -35,10 +56,11 @@ function subElements(x, y) {
     return y - x;
 }
 console.log("Step b: " + subElements(x, y));
+*/
 
 
-
-//Step C:
+//Part C:
+/*
 let sum = 0;  //I don't know why sum needs to equal 0
 for (let i = 0; i < ages.length; i++) { 
     sum += ages[i];
