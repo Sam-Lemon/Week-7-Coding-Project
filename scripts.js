@@ -96,14 +96,23 @@ console.log(createFullName('Sam', 'Lemon')); //returns Sam Lemon
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
 console.log("Problem 9");
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]; //create the array
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]; //create the array
 
-
+const sumNumbers = numbers.reduceRight((acc, cur) => acc + cur, 0);
+    console.log(sumNumbers); //sum of array
+if (sumNumbers > 100) {
+    console.log('true');
+} else {
+    console.log('false');
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
 console.log("Problem 10");
+function calculateAverage(arr) {
+
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -111,16 +120,16 @@ console.log("Problem 10");
 //in the first array is greater than the average of the elements in the second array.
 console.log("Problem 11");
 
-const oneArray = [10, 11, 12, 13, 14, 15];
+const oneArray = [10, 11, 12, 13, 14, 15]; //first array
 
 const sumOneArray = oneArray.reduceRight((acc, cur) => acc + cur, 0);
-    console.log(sumOneArray);
+    console.log(sumOneArray); //sum of the array, 
 
 const averageOneArray = (sumOneArray / oneArray.length);
 console.log(averageOneArray);
 
 
-const twoArray = [20, 21, 22, 23, 24, 25];
+const twoArray = [20, 21, 22, 23, 24, 25]; //second array
 
 const sumTwoArray = twoArray.reduceRight((acc, cur) => acc + cur, 0);
     console.log(sumTwoArray);
@@ -133,23 +142,6 @@ if (averageOneArray > averageTwoArray) {
 } else {
     console.log('false');
 }
-
-
-/*
-let arrayTwoSum = 0;  
-for (let i = 0; i < arrayTwo.length; i++) { 
-    sum += arrayTwo[i];
-}
-let arrayTwoAverage = sum / arrayTwo.length;
-console.log("ArrayTwo Average" + average); 
-
-
-if(arrayOneAverage > arrayTwoAverage) {
-    console.log('True');
-} else {
-    console.log("arrayTwo's average is larger than arrayOne.");
-}
-*/
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside 
