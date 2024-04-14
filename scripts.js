@@ -49,10 +49,10 @@ const names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 console.log(names);
 
 //part a
-const nameLengths = names.map((x) => x.length);  //created another array using map to take x and log it's length
-    console.log(nameLengths);       //this array has all the lengths for each element in the names array
+const lengthOfNames = names.map((x) => x.length);  //created another array using map to take x and log it's length
+    console.log(lengthOfNames);       //this array has all the lengths for each element in the names array
 
-const sumNameLengths = nameLengths.reduce((acc, cur) => acc + cur, 0);  //sum of all elements in nameLengths array
+const sumNameLengths = lengthOfNames.reduce((acc, cur) => acc + cur, 0);  //sum of all elements in nameLengths array
     console.log(sumNameLengths);
 
 const avgNameLengths = (sumNameLengths / names.length);
