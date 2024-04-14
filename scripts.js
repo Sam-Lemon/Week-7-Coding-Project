@@ -14,7 +14,9 @@
 console.log("Problem 1");
 let ages = [3, 9, 23, 64, 2, 8, 28, 93]; //create the array
 console.log(ages);
-//ages.push(100); //Part B: uncomment
+/*
+ages.push(100); //Part B: uncomment
+console.log(ages);*/
 
 //Part A:
 let x = ages.slice(0, 1); //stores the first element of an array. index 0, only taking 1 element
@@ -52,6 +54,7 @@ let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //4. How do you access the first element of any array?
 //array[0]; 
+//array.at(0);
 //array.slice(0, 1) //this extracts the 0 index element (first element) and only that one
 //array.shift() //this removes the first element and changes the length of the array
 
@@ -66,12 +69,14 @@ let nameLengths = [5, 3, 4];             // create a new array*/
 console.log("Problem 5");
 
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////
 //6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
 console.log("Problem 6");
 
 
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 /*7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. 
 (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').*/
 console.log("Problem 7");
@@ -98,22 +103,21 @@ console.log(createFullName('Sam', 'Lemon')); //returns Sam Lemon
 console.log("Problem 9");
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]; //create the array
 
-const sumNumbers = numbers.reduceRight((acc, cur) => acc + cur, 0);
-    console.log(sumNumbers); //sum of array
+const sumNumbers = numbers.reduce((acc, cur) => acc + cur, 0); //reduce moves through the array from left to right
+    console.log(sumNumbers); 
 if (sumNumbers > 100) {
     console.log('true');
 } else {
     console.log('false');
 }
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
 console.log("Problem 10");
-function calculateAverage(arr) {
+const probTenNumbers = [45, 89, 3, 88, 69, 5, 3, 78, 22, 69, 120];
 
-}
-
+const sumProbTenNumbers = probTenNumbers.reduce((acc, cur) => acc + cur, 0);
+    console.log(sumProbTenNumbers / probTenNumbers.length);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //11. Write a function that takes two arrays of numbers and returns true if the average of the elements 
@@ -122,7 +126,7 @@ console.log("Problem 11");
 
 const oneArray = [10, 11, 12, 13, 14, 15]; //first array
 
-const sumOneArray = oneArray.reduceRight((acc, cur) => acc + cur, 0);
+const sumOneArray = oneArray.reduceRight((acc, cur) => acc + cur, 0); //reduce.right moves through the array from right to left
     console.log(sumOneArray); //sum of the array, 
 
 const averageOneArray = (sumOneArray / oneArray.length);
