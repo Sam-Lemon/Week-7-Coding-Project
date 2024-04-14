@@ -80,7 +80,13 @@ console.log("Problem 6");
 /*7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. 
 (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').*/
 console.log("Problem 7");
-
+function sayHi(word, n) {
+    if (n > 0) {                        //making sure n = a number larger than 0
+        console.log(word.repeat(n)) ;   //console logging function
+    }
+}
+sayHi('Hello', 3);          //values passed through function
+sayHi('Ciao', 5);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -128,7 +134,6 @@ const oneArray = [10, 11, 12, 13, 14, 15]; //first array
 
 const sumOneArray = oneArray.reduceRight((acc, cur) => acc + cur, 0); //reduce.right moves through the array from right to left
     console.log(sumOneArray); //sum of the array, 
-
 const averageOneArray = (sumOneArray / oneArray.length);
 console.log(averageOneArray);
 
@@ -137,7 +142,6 @@ const twoArray = [20, 21, 22, 23, 24, 25]; //second array
 
 const sumTwoArray = twoArray.reduceRight((acc, cur) => acc + cur, 0);
     console.log(sumTwoArray);
-
 const averageTwoArray = (sumTwoArray / twoArray.length);
 console.log(averageTwoArray); //average should be 22.5
 
@@ -151,6 +155,7 @@ if (averageOneArray > averageTwoArray) {
 //12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside 
 //and if moneyInPocket is greater than 10.50.
 console.log("Problem 12");
+
 
 
 
