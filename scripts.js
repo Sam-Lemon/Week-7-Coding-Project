@@ -12,7 +12,7 @@
 */
 // Step 1
 console.log("Problem 1");
-let ages = [3, 9, 23, 64, 2, 8, 28, 93]; //create the array
+const ages = [3, 9, 23, 64, 2, 8, 28, 93]; //create the array
 console.log(ages);
 /*
 ages.push(100); //Part B: uncomment
@@ -23,7 +23,8 @@ let x = ages.slice(0, 1); //stores the first element of an array. index 0, only 
 console.log("x = " + x);
 let y = ages[ages.length - 1]; //stores the last element of an array. 
 console.log("y = " + y);
-//these two methods (idk if that's the right word) store the values, not return them, this makes sure that they stay in the array and are not pulled out.
+//these two methods (idk if that's the right word) store the values, not return them, 
+//this makes sure that they stay in the array and are not pulled out.
 
 function subElements(x, y) {
     return y - x; //returns the value remaining 
@@ -44,12 +45,27 @@ console.log("part c: " + average);
     b. Use a loop to iterate through the array again and concatenate all the names together, separated by spaces.
 */
 console.log('Problem 2');
-let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
+const names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
+console.log(names);
 
+//part a
+const nameLengths = names.map((x) => x.length);  //created another array using map to take x and log it's length
+    console.log(nameLengths);       //this array has all the lengths for each element in the names array
+
+const sumNameLengths = nameLengths.reduce((acc, cur) => acc + cur, 0);  //sum of all elements in nameLengths array
+    console.log(sumNameLengths);
+
+const avgNameLengths = (sumNameLengths / names.length);
+    console.log('part a: ' + avgNameLengths);
+
+//part b
+if (names.length > 0) {
+    console.log('part b: ' + names.join(' ')); //used the join method, added ' ' to get the space between names
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //3. How do you access the last element of any array?
-//array[array.length -1]
+//array[array.length -1] because the length starts with the index[0] but considers it 1.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //4. How do you access the first element of any array?
@@ -82,7 +98,7 @@ console.log("Problem 6");
 console.log("Problem 7");
 function sayHi(word, n) {
     if (n > 0) {                        //making sure n = a number larger than 0
-        console.log(word.repeat(n)) ;   //console logging function
+        console.log(word.repeat(n)) ;   //console logging function using repeat method
     }
 }
 sayHi('Hello', 3);          //values passed through function
@@ -122,7 +138,7 @@ if (sumNumbers > 100) {
 console.log("Problem 10");
 const probTenNumbers = [45, 89, 3, 88, 69, 5, 3, 78, 22, 69, 120];
 
-const sumProbTenNumbers = probTenNumbers.reduce((acc, cur) => acc + cur, 0);
+const sumProbTenNumbers = probTenNumbers.reduce((acc, cur) => acc + cur, 0); //reduce moves through array from left to right
     console.log(sumProbTenNumbers / probTenNumbers.length);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -135,7 +151,7 @@ const oneArray = [10, 11, 12, 13, 14, 15]; //first array
 const sumOneArray = oneArray.reduceRight((acc, cur) => acc + cur, 0); //reduce.right moves through the array from right to left
     console.log(sumOneArray); //sum of the array, 
 const averageOneArray = (sumOneArray / oneArray.length);
-console.log(averageOneArray);
+    console.log(averageOneArray);
 
 
 const twoArray = [20, 21, 22, 23, 24, 25]; //second array
@@ -143,7 +159,7 @@ const twoArray = [20, 21, 22, 23, 24, 25]; //second array
 const sumTwoArray = twoArray.reduceRight((acc, cur) => acc + cur, 0);
     console.log(sumTwoArray);
 const averageTwoArray = (sumTwoArray / twoArray.length);
-console.log(averageTwoArray); //average should be 22.5
+    console.log(averageTwoArray); 
 
 if (averageOneArray > averageTwoArray) {
     console.log('true');
