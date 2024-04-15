@@ -49,6 +49,20 @@ const names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 console.log(names);
 
 //part a
+let elementLengths = [];            //created a new array to put the element lengths in
+for (const element of names) {
+    elementLengths.push(element.length);    //pushed to the new array the element lengths
+}
+console.log(elementLengths);    
+
+let sumN = 0;                      //calculates the sum of all the lengths               
+for (let i = 0; i < names.length; i++) {
+    sumN += elementLengths[i];      
+}
+console.log(sumN);
+console.log('part a: ' + sumN / names.length);  //calculates the average
+
+/*
 const lengthOfNames = names.map((x) => x.length);  //created another array using map to take x and log it's length
     console.log(lengthOfNames);       //this array has all the lengths for each element in the names array
 
@@ -57,6 +71,7 @@ const sumNameLengths = lengthOfNames.reduce((acc, cur) => acc + cur, 0);  //sum 
 
 const avgNameLengths = (sumNameLengths / names.length);
     console.log('part a: ' + avgNameLengths);
+*/
 
 //part b
 if (names.length > 0) {
@@ -83,14 +98,20 @@ let names = ["Kelly", "Sam", "Kate"];    // starting with this array
 let nameLengths = [5, 3, 4];             // create a new array*/
 
 console.log("Problem 5");
-
+let nameLengths = [];            //created a new array to put the element lengths in
+for (const element of names) {
+    nameLengths.push(element.length);    //pushed to the new array the element lengths
+}
+console.log(nameLengths);    
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
 console.log("Problem 6");
-
-
-
+let sumL = 0;                                     
+for (let i = 0; i < nameLengths.length; i++) {
+    sumL += nameLengths[i];      
+}
+console.log(sumL);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 /*7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. 
@@ -175,9 +196,13 @@ console.log("Problem 12");
 
 
 
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //13. Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
 console.log("Problem 13");
+
+
+
 
 
 
