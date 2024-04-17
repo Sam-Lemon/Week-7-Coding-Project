@@ -189,23 +189,22 @@ if (averageOneArray > averageTwoArray) {
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-//12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside 
-//and if moneyInPocket is greater than 10.50.
+/*12. Write a function called willBuyDrink that takes a boolean isHotOutside, 
+and a number moneyInPocket, and returns true if it is hot outside 
+and if moneyInPocket is greater than 10.50.*/
 console.log("Problem 12");
 
+function willBuyDrink (isHotOutside, moneyInPocket) {
+    if(isHotOutside === true && moneyInPocket > 10.50) {
+        console.log('true');
+    } else {
+        console.log('false');
+    }
+}
 
-
+willBuyDrink(true, 20);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //13. Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
 console.log("Problem 13");
-
-
-
-
-
-
-
-
-
