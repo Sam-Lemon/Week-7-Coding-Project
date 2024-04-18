@@ -240,7 +240,9 @@ function returnBook (num) {
             console.log("Literature"); 
         } else if (num >= 900 && num < 999) {
             console.log("History and geography"); 
-        } 
+        } else {
+            console.log("Is this a book?");
+        }
     }
 
 returnBook(5.36);
