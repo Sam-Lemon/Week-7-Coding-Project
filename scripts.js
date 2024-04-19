@@ -15,8 +15,8 @@ console.log("Problem 1");
 const ages = [3, 9, 23, 64, 2, 8, 28, 93]; //create the array
 console.log(ages);
 
-//ages.push(100); //Part B: uncomment
-//console.log(ages);
+ages.push(100); //Part B: uncomment
+console.log(ages);
 
 //Part A:
 let x = ages.slice(0, 1); //stores the first element of an array. index 0, only taking 1 element
