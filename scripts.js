@@ -19,7 +19,7 @@ ages.push(100); //Part B: uncomment
 console.log(ages);
 
 //Part A:
-let x = ages.slice(0, 1); //stores the first element of an array. index 0, only taking 1 element
+let x = ages[0]; //stores the first element of an array. index 0, only taking 1 element
 console.log("first = " + x);
 let y = ages[ages.length - 1]; //stores the last element of an array. 
 console.log("last = " + y);
@@ -37,7 +37,7 @@ for (let i = 0; i < ages.length; i++) {
     sum += ages[i];
 }
 let average = sum / ages.length;
-console.log("part c: " + average); 
+console.log("Average age: " + average); 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 /*2. Create an array called names that contains the following values: 
         'Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'.
@@ -60,7 +60,7 @@ for (let i = 0; i < names.length; i++) {
     sumN += elementLengths[i];      
 }
 console.log(sumN);
-console.log('part a: ' + sumN / names.length);  //calculates the average
+console.log('Average number of letters: ' + sumN / names.length);  //calculates the average
 
 /*
 const lengthOfNames = names.map((x) => x.length);  //created another array using map to take x and log it's length
@@ -75,7 +75,7 @@ const avgNameLengths = (sumNameLengths / names.length);
 
 //part b
 if (names.length > 0) {
-    console.log('part b: ' + names.join(' ')); //used the join method, added ' ' to get the space between names
+    console.log('Concatenated names: ' + names.join(' ')); //used the join method, added ' ' to get the space between names
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -118,12 +118,15 @@ console.log(sumL);
      I would expect the function to return 'HelloHelloHello').*/
 console.log("Problem 7");
 function sayHi(word, n) {
-    if (n > 0) {                        //making sure n = a number larger than 0
-        console.log(word.repeat(n)) ;   //console logging function using repeat method
+    if (n >= 0) {                        //making sure n = a number larger than 0
+        console.log(word.repeat(n));   //console logging function using repeat method
+    } else {
+        console.log("oh no, try a number above 0");
     }
 }
 sayHi('Hello', 3);          //values passed through function
 sayHi('Ciao', 5);
+sayHi('Hola', -1);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -155,6 +158,11 @@ if (sumNumbers > 100) {
 } else {
     console.log('false');
 }
+
+//I tried to fix your note, but if I put a return at line 157, 159 or 161 I get an illegal
+//return statement error in my console. And I tried it with return;, return sumNumbers;,
+//return true;, and return 'true';. All of them give me the error. So I'm not exactly
+//sure where I'm going wrong.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 /*10. Write a function that takes an array of numbers and returns the average of all the elements 
